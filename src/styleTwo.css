@@ -1,0 +1,54 @@
+#weatherdexTwo {
+    background-color: #e8e8e8;
+    padding: 40px 20px;
+    flex-grow: 3;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#todayBtn {
+    background-color: #d9d8d8;
+    color: #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+#forcastBtn {
+    color: gray;
+    background-color: #6c56ce;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.detail {
+
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(125px, 200px);
+    gap: 35px;
+}
+
+.detailBox {
+    color: #fff;
+    border-radius: 20px;
+    background: var(--primary-bg);
+    padding: 20px;
+    text-align: center;
+}
+
+.detailBox span { 
+    font-size: 0.8rem; 
+    color: var(--text-light); }
+
+.text {
+    margin-top: 35px;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
