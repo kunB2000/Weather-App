@@ -16,7 +16,7 @@ const iconMap = {
 };
 
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-city = ["New York", "London", "Paris", "Tokyo", "Bangkok", "Hong Kong", "Macao", "Istanbul", "Dubai", "Singapore"]
+const city = ["New York", "London", "Paris", "Tokyo", "Bangkok", "Hong Kong", "Macao", "Istanbul", "Dubai", "Singapore"]
 
 const updateUI = (data) => {
   
