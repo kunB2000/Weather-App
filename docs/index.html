@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+<script defer src="main.js"></script></head>
+<body>
+    <main id="app">
+        <!-- Information 1 -->
+        <aside id="weatherdex">
+            <form id="searchBar">
+                <input type="text" id="searchBarInput" placeholder="Search city..." required>
+                <button id="searchIcon">🔍</button>
+            </form>
+
+            <!-- Part 1 -->
+            <section id="section">
+                <div id="tempImg"></div>
+                <div id="temp"> </div>
+                <div id="description"></div>
+            </section>
+
+            <!-- Hinge -->
+            <hr id="hinge">
+
+            <!-- Date & Time -->
+             <section id="sectionTwo">
+                <p id="date"></p>
+                <p id="dayNtime"></p>
+                <p>Day</p>
+             </section>
+
+            <!-- City -->
+             <h3 id="city"></h3>
+
+        </aside>
+
+        <!-- Information 2 -->
+        <section id="weatherdexTwo">
+            <header class="top">
+                <button id="todayBtn">Today</div>
+                <button id="forcastBtn">Forcast</button>
+            </header>
+
+            <div class="detail">
+                <div class="detailBox">
+                    <span>Feels Like</span>
+                    <p id="feelsLike" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Wind Speed</span>
+                    <p id="windSpeed" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Wind Direction</span>
+                    <p id="windDirection" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Humidity</span>
+                    <p id="humidity" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Precipitation</span>
+                    <p id="precipitation" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Pressure</span>
+                    <p id="pressure" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Sky Conditions</span>
+                    <p id="skyConditions" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Sunrise</span>
+                    <p id="sunrise" class="text"></p>
+                </div>
+                <div class="detailBox">
+                    <span>Sunset</span>
+                    <p id="sunset" class="text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</html>
