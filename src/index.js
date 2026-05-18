@@ -5,7 +5,6 @@ const button = document.getElementById('searchIcon');
 
 const iconMap = {
   clear: "https://openweathermap.org/img/wn/01d@2x.png",
-  cloudy: "https://openweathermap.org/img/wn/03d@2x.png",
   "clear-day": "☀️",
   'clear-night': '🌙',
   rain: '🌧️',
@@ -34,7 +33,7 @@ const updateUI = (data) => {
   document.getElementById('dayNtime').innerHTML = `${day}, ${time12hr}`;
   getCityName(data.latitude, data.longitude).then(city => {
     document.getElementById('city').innerHTML = city;
-  });;
+  });
   
   document.getElementById('tempImg').innerHTML = iconMap[data.days[0].icon] || '🌡️';
 
@@ -105,19 +104,25 @@ const initApp = () => {
           (error) => {
               // ERROR: User denied or error occurred
               console.warn("Location denied, loading default city.");
-              fetchWeatherData(city[Math.floor(Math.random() * 10)]);
+              console.warn(error)
+              fetchWeatherData(randomCity());
           }
       );
   } else {
       // Browser doesn't support Geolocation
-      fetchWeatherData(city[Math.floor(Math.random() * 10)]);
+      fetchWeatherData(randomCity());
   }
 };
+
+const randomCity = () => {
+  return city[Math.floor(Math.random() * 10)]
+}
 
 // 3. Run on Page Load
 window.addEventListener('load', initApp);
 
 // 4. Keep your manual search listener
+const form = document.querySelector("form")
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const city = document.getElementById('searchBarInput').value;
